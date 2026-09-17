@@ -57,6 +57,10 @@ class _WebViewScreenState extends State<WebViewScreen> {
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
+      // Identify this client explicitly so the hosted page can apply the
+      // Android WebView-only product-card layout without relying on the
+      // platform's optional "wv" user-agent token.
+      ..setUserAgent('YourSMFoodAndroidWebView/1.0 Android')
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {
@@ -84,7 +88,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
           },
         ),
       )
-      ..loadRequest(Uri.parse('https://yoursmfood.store/'));
+      ..loadRequest(Uri.parse('https://yoursmfood.store/index.html?v=android-webview-grid-20260917i'));
   }
 
   Future<void> _checkInitialConnectivity() async {
