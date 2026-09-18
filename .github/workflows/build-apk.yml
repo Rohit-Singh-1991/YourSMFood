@@ -42,7 +42,7 @@ jobs:
           storePassword=$KEYSTORE_PASSWORD
           keyPassword=$KEY_PASSWORD
           keyAlias=$KEY_ALIAS
-          storeFile=upload-keystore.jks
+          storeFile=../upload-keystore.jks
           EOF
           chmod 600 android/upload-keystore.jks android/key.properties
 
