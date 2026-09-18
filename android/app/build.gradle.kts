@@ -38,7 +38,7 @@ android {
     defaultConfig {
         applicationId = "com.yoursm.food"
         minSdk = flutter.minSdkVersion
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 3
         versionName = "1.0.2"
     }
