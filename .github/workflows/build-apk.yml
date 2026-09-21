@@ -52,10 +52,10 @@ jobs:
           grep -n 'applicationId\|versionCode\|versionName' android/app/build.gradle.kts
 
       - name: Build signed release APK
-        run: flutter build apk --release --build-name=1.0.2 --build-number=3
+        run: flutter build apk --release --build-name=1.0.7 --build-number=8
 
       - name: Build signed release AAB
-        run: flutter build appbundle --release --build-name=1.0.2 --build-number=3
+        run: flutter build appbundle --release --build-name=1.0.7 --build-number=8
 
       - name: Upload Play Store bundle and APK
         uses: actions/upload-artifact@v4
